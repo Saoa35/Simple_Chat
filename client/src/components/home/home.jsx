@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./home.css";
 
 function Home({ socket }) {
   const navigate = useNavigate();
@@ -20,24 +21,32 @@ function Home({ socket }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Enter chat</h2>
-      <label htmlFor="userName">Name</label>
+    <form onSubmit={handleSubmit} className="form">
+      <h2 className="home_header">Enter chat</h2>
+      <label htmlFor="userName"></label>
       <input
+        className="user_input"
+        placeholder="Enter your name"
         type="text"
         id="userName"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
       />
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email"></label>
       <input
+        className="email_input"
+        placeholder="Enter your email"
         type="email"
         id="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type="submit">Enter</button>
-      {valid && <p>Name and email fields must be filled</p>}
+      <button type="submit" className="submit_btn">
+        Enter
+      </button>
+      {valid && (
+        <p className="warning">Name and email fields should not be empty</p>
+      )}
     </form>
   );
 }

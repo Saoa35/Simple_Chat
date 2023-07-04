@@ -6,7 +6,7 @@ export const Body = () => {
       </header>
       <div className="container">
         <div className="chats">
-          <p>You</p>
+          <p className="sender_name">You</p>
           <div className="message-sender">
             <p>Hello</p>
           </div>

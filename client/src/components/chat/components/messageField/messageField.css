@@ -28,8 +28,14 @@
   outline: none;
   color: #eae3d2;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .sent_btn:hover {
-  background-color: rgb(129, 201, 129);
+  background-color: rgb(90, 180, 90);
+}
+
+.sent_btn:active {
+  background-color: rgb(46, 101, 46);
+  transform: translateY(2px);
 }

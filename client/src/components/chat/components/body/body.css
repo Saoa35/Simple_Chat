@@ -2,9 +2,8 @@
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   padding: 20px;
-  border-bottom: 1px solid #bfbdbd;
 }
 
 .escape_btn {

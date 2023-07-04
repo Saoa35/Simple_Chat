@@ -1,8 +1,14 @@
+import socketIO from "socket.io-client";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/home/home";
+
+const socket = socketIO.connect("http://localhost:5000");
+
 function App() {
   return (
-    <div>
-      <h1>Websocket</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

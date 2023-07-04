@@ -1,7 +1,17 @@
+import { Body } from "./components/body";
+import { MessageField } from "./components/messageField";
+import { Sidebar } from "./components/sidebar";
+
 function ChatPage() {
   return (
-    <div>
-      <h1>Chat Page</h1>
+    <div className="chat">
+      <Sidebar />
+
+      <main className="main">
+        <Body />
+
+        <MessageField />
+      </main>
     </div>
   );
 }

@@ -1,0 +1,63 @@
+.body_header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 20px;
+}
+
+.escape_btn {
+  padding: 10px;
+  min-width: 10%;
+  border: none;
+  outline: none;
+  background-color: #d1512d;
+  cursor: pointer;
+  color: #eae3d2;
+  transition: background-color 0.3s ease;
+}
+
+.escape_btn:hover {
+  background-color: #e36d4d;
+}
+
+.escape_btn:active {
+  background-color: #b93d22;
+  transform: translateY(2px);
+}
+
+.body_container {
+  height: 80vh;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.body_container > * {
+  margin-bottom: 10px;
+}
+
+.chats > p {
+  font-size: 0.8125em;
+}
+
+.sender-name {
+  text-align: right;
+}
+
+.message-sender {
+  background-color: rgb(194, 243, 194);
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  font-size: 0.9375em;
+}
+
+.message-recipient {
+  background-color: #e3e2e2;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9375em;
+}

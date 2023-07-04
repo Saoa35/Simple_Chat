@@ -1,7 +1,24 @@
 export const Body = () => {
   return (
-    <div>
-      <h1>Body</h1>
-    </div>
+    <>
+      <header className="header">
+        <button className="escape_btn">Leave chat</button>
+      </header>
+      <div className="container">
+        <div className="chats">
+          <p>You</p>
+          <div className="message-sender">
+            <p>Hello</p>
+          </div>
+        </div>
+
+        <div className="chats">
+          <p>You</p>
+          <div className="message-recipient">
+            <p>Hello</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };

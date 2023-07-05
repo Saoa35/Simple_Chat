@@ -1,14 +1,21 @@
+import { useEffect, useState } from "react";
 import "./sidebar.css";
 
-export const Sidebar = () => {
+export const Sidebar = ({ socket }) => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    socket.on("responseNewUser", (data) => setUsers(data));
+  }, [socket, users]);
+
   return (
     <div className="sidebar">
       <h4 className="sidebar_header">Users</h4>
 
       <ul className="users">
-        <li>User1</li>
-        <li>User2</li>
-        <li>User3</li>
+        {users.map((element) => (
+          <li key={element.socketID}>{element.user}</li>
+        ))}
       </ul>
     </div>
   );

@@ -13,7 +13,7 @@ function ChatPage({ socket }) {
 
   return (
     <div className="chat">
-      <Sidebar />
+      <Sidebar socket={socket} />
 
       <main className="main">
         <Body messages={messages} />

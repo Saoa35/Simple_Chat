@@ -34,6 +34,10 @@ export const Body = ({ messages }) => {
             </div>
           )
         )}
+
+        <div className="status">
+          <p>is typing...</p>
+        </div>
       </div>
     </>
   );

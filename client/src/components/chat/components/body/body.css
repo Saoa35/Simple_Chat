@@ -28,7 +28,6 @@
 
 .body_container {
   height: 80vh;
-  background-color: #fff;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -60,4 +59,11 @@
   padding: 10px;
   border-radius: 10px;
   font-size: 0.9375em;
+}
+
+.status {
+  position: fixed;
+  font-size: 0.8125em;
+  font-style: italic;
+  bottom: 70px;
 }

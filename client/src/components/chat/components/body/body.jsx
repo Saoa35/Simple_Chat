@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./body.css";
 
-export const Body = ({ messages }) => {
+export const Body = ({ messages, status }) => {
   const navigate = useNavigate();
 
   const handleLeave = () => {
@@ -34,6 +34,10 @@ export const Body = ({ messages }) => {
             </div>
           )
         )}
+
+        <div className="status">
+          <p>{status}</p>
+        </div>
       </div>
     </>
   );

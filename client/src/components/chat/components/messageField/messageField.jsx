@@ -4,6 +4,9 @@ import "./messageField.css";
 export const MessageField = ({ socket }) => {
   const [message, setMessage] = useState("");
 
+  const isTyping = () =>
+    socket.emit("typing", `${localStorage.getItem("userName")} is typing...`);
+
   const handleSend = (e) => {
     e.preventDefault();
 
@@ -26,6 +29,7 @@ export const MessageField = ({ socket }) => {
           className="user-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          onKeyDown={isTyping}
         />
         <button className="sent_btn">Sent</button>
       </form>

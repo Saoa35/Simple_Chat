@@ -6,17 +6,25 @@ import "./styles.css";
 
 function ChatPage({ socket }) {
   const [messages, setMessages] = useState([]);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     socket.on("response", (data) => setMessages([...messages, data]));
   }, [socket, messages]);
+
+  useEffect(() => {
+    socket.on("responseTyping", (data) => {
+      setStatus(data);
+      setTimeout(() => setStatus(""), 1000);
+    });
+  }, [socket]);
 
   return (
     <div className="chat">
       <Sidebar socket={socket} />
 
       <main className="main">
-        <Body messages={messages} />
+        <Body messages={messages} status={status} />
 
         <MessageField socket={socket} />
       </main>

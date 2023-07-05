@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./body.css";
 
-export const Body = ({ messages }) => {
+export const Body = ({ messages, status }) => {
   const navigate = useNavigate();
 
   const handleLeave = () => {
@@ -36,7 +36,7 @@ export const Body = ({ messages }) => {
         )}
 
         <div className="status">
-          <p>is typing...</p>
+          <p>{status}</p>
         </div>
       </div>
     </>

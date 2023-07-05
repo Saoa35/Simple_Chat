@@ -8,13 +8,21 @@ export const Sidebar = ({ socket }) => {
     socket.on("responseNewUser", (data) => setUsers(data));
   }, [socket, users]);
 
+  const filteredList = users.filter(
+    (value, index, self) =>
+      index ===
+      self.findIndex(
+        (el) => el.user === value.user && el.socketID === value.socketID
+      )
+  );
+
   return (
     <div className="sidebar">
       <h4 className="sidebar_header">Users</h4>
 
       <ul className="users">
-        {users.map((element) => (
-          <li key={element.socketID}>{element.user}</li>
+        {filteredList.map((element) => (
+          <li key={element.socketID}>{element.userName}</li>
         ))}
       </ul>
     </div>

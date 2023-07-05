@@ -1,6 +1,6 @@
 .sidebar {
   height: 100%;
-  background-color: #ffffff;
+  background-color: #e6e6ec76;
   flex: 0.2;
   padding: 20px;
   border-right: 1px solid #bfbdbd;
@@ -9,6 +9,7 @@
 .sidebar_header {
   margin: 30px 0 20px 0;
   font-size: 1.5625em;
+  color: rgb(33, 18, 104);
 }
 
 .users {
@@ -21,4 +22,5 @@
 .users > li {
   margin-bottom: 20px;
   cursor: pointer;
+  color: rgb(65, 95, 36);
 }
